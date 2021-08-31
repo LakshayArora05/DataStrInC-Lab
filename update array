@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main()
+{
+    int i,n,array[20],position,key;
+    printf("enter the number of elements for  array");
+    scanf("%d",&n);
+    printf("enter the elements for array");
+    for (i=0;i<n;i++)
+    {
+        scanf("%d",&array[i]);
+        
+    }
+    printf("\nEnter the position to be updated:");
+    scanf("%d",&position);
+    printf("enter the element");
+    scanf("%d",&key);
+    array[position-1]=key;
+    printf("new array is:");
+    for (i=0;i<n;i++)
+    {
+        
+        printf("%d ",array[i]);
+    }
+
+    return 0;
+}
