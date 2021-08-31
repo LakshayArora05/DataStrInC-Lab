@@ -7,7 +7,7 @@ int main()
     scanf("%d",&m);
     printf("enter the number of columns:");
     scanf("%d",&n);
-    int array1[m][n];
+    int array1[m][n],array2[m][n],array3[m][n];
     printf("enter the elements:\n");
     for (i=0;i<m;i++)
     {
@@ -24,53 +24,44 @@ int main()
     {
         for(j=0;j<n;j++)
             {
-                printf("%d ",array1[i][j]);
+                printf("%5d ",array1[i][j]);
             }
             printf("\n");
     }
     
-    int a,b,c,d;
-    printf("enter the number of rows");
-    scanf("%d",&c);
-    printf("enter the number of columns:");
-    scanf("%d",&d);
-    int array2[c][d];
+
+   
     printf("enter the elements:\n");
-    for (a=0;a<c;a++)
+    for (i=0;i<m;i++)
     {
-        for(b=0;b<d;b++)
+        for(j=0;j<n;j++)
             {
-                scanf("%d",&array2[a][b]);
+                scanf("%d",&array2[i][j]);
             }
     }
      printf("the matrix 2 is:\n");
-    for (a=0;a<c;a++)
+   for (i=0;i<m;i++)
     {
-        for(b=0;b<d;b++)
+        for(j=0;j<n;j++)
             {
-                printf("%d ",array2[a][b]);
+                printf("%5d ",array2[i][j]);
             }
             printf("\n");
     }
     
-    int w,x,y=c,z=d;
-    int array3[y][z];
-    for (w=0;w<c;w++)
-    {
-        for(x=0;x<d;x++)
-        {
-          array3[w][x]=array1[w][x]+array2[w][x];
-        }
-    }
-    printf("array after addition is:");
-     for (w=0;w<c;w++)
-    {
-        for(x=0;x<d;x++)
-        {
+   
     
-         printf("%d ",array3[w][x]);
+    printf("sum of the 2 matrices is:\n");
+    for (i=0;i<m;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+          array3[i][j]=array1[i][j]+array2[i][j];
+           printf("%5d ",array3[i][j]);
         }
+        printf("\n");
     }
+   
     return 0;
         
     }
