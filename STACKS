@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <conio.h>
-#define MAX 10
+#define MAX 2
 int st[MAX],top=-1;
 void push(int st[],int val);
 int pop(int  st[]);
@@ -31,7 +31,15 @@ int main()
             
             case 2:
             val=pop(st);
-            printf("\nthe value that is deleted is : %d", val);
+            if (val==-1)
+            {
+                printf("\nstack underflow");
+            }
+            else
+            {
+                  printf("\nthe value that is deleted is : %d", val);
+            }
+          
             break;
             
             case 3:
@@ -63,7 +71,7 @@ int pop(int st[])
     int val;
     if (top==-1)
     {
-        printf("\nstack underflow");
+        
         return -1;
     }
     else
