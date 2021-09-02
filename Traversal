@@ -11,10 +11,10 @@ int main()
         scanf("%d",&array[i]);
         
     }
-    printf("the array is:");
+    printf("\nthe array is:");
     for (i=0;i<n;i++)
     {
-    printf("%d ", array[i]);
+    printf("\n array[%d]=%d ",i,array[i]);
     }
 
     return 0;
